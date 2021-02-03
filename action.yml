@@ -1,0 +1,18 @@
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+name: 'gha-ssh'
+author: 'Ryan A. Chapman'
+description: 'Allows ssh into running GitHub Action'
+branding:
+  icon: 'terminal'
+  color: 'orange'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  authorized_github_users:
+    description: 'Comma separated list of GitHub usernames which are allowed to ssh in (e.g. "johndoe,janedoe")'
+    required: true
+  debug:
+    description: 'Enable tmate debug logging (-vvv -F cmdline args)'
+    required: false
+    default: false
