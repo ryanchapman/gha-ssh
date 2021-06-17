@@ -49,20 +49,20 @@ jobs:
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
       -
-        name: Checkout
-        uses: actions/checkout@v2
-      -
-        name: Validate
-        uses: docker/bake-action@v1
-        with:
-          targets: validate
-      -
-        name: Test
-        uses: docker/bake-action@v1
-        with:
-          targets: test
-      -
-        name: Upload coverage
-        uses: codecov/codecov-action@v1
+#        name: Checkout
+#        uses: actions/checkout@v2
+#      -
+#        name: Validate
+#        uses: docker/bake-action@v1
+#        with:
+#          targets: validate
+#      -
+#        name: Test
+#        uses: docker/bake-action@v1
+#        with:
+#          targets: test
+#      -
+#        name: Upload coverage
+#        uses: codecov/codecov-action@v1
         #with:
         #  file: ./coverage/clover.xml
